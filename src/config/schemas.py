@@ -21,3 +21,8 @@ class DBConfig:
             port=self.port,
             database=self.db,
         )
+
+
+@dataclass
+class ProjectConfigs:
+    url_for_questions: str

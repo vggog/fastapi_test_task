@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from .schemas import DBConfig
+from .schemas import DBConfig, ProjectConfigs
 
 
 load_dotenv()
@@ -14,4 +14,9 @@ db_config = DBConfig(
     password=os.getenv("POSTGRES_PASSWORD"),
     host=os.getenv("POSTGRES_HOST"),
     port=os.getenv("POSTGRES_PORT")
+)
+
+
+project_config = ProjectConfigs(
+    url_for_questions="https://jservice.io/api/random?count={}"
 )
